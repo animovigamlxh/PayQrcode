@@ -13,14 +13,13 @@ header {
       &.flex {
         display: flex;
         align-items: center;
-        gap: 10px;
-        font-size: 14px;
+        justify-content: space-between;
       }
     }
   }
 
   .alipay-hide {
-    margin-top: 20px;
+    margin-top: 1rem;
 
     span.title {
       display: inline-block;
@@ -47,7 +46,7 @@ main {
     height: max-content;
   }
 
-  &>.qr-main {
+  & > .qr-main {
     position: relative;
     box-sizing: border-box;
     display: flex;
@@ -59,17 +58,17 @@ main {
     background: none;
     overflow: hidden;
 
-    &>img {
+    & > img {
       width: 100%;
       aspect-ratio: 1/1;
 
       &.alipay-qr {
         position: absolute;
-        right: 18.88px;
-        top: auto;
-        bottom: 18.88px;
-        width: 50%;
-        transform: rotate(180deg);
+        width: 30%;
+        height: 30%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
       }
     }
 
@@ -79,7 +78,7 @@ main {
       background: url('../../assets/images/theme_a.webp') no-repeat;
       background-size: contain;
 
-      &>img {
+      & > img {
         width: 24%;
         height: auto;
         aspect-ratio: 1/1;
@@ -102,7 +101,7 @@ main {
       background: url('../../assets/images/theme_b.webp') no-repeat;
       background-size: contain;
 
-      &>img {
+      & > img {
         width: 62%;
         height: auto;
         aspect-ratio: 1/1;
@@ -125,7 +124,7 @@ main {
       background: url('../../assets/images/theme_c.webp') no-repeat;
       background-size: contain;
 
-      &>img {
+      & > img {
         width: 55%;
         height: auto;
         aspect-ratio: 1/1;
@@ -148,7 +147,7 @@ main {
       background: url('../../assets/images/theme_d.webp') no-repeat;
       background-size: contain;
 
-      &>img {
+      & > img {
         width: 62%;
         height: auto;
         aspect-ratio: 1/1;
@@ -164,7 +163,21 @@ main {
         }
       }
     }
-
   }
 
+  & > .download-qrcode {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+.payment-page {
+  text-align: center;
+
+  .payment-qrcode {
+    img {
+      width: 150px;
+      height: 150px;
+    }
+  }
 }
